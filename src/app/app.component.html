@@ -1,0 +1,300 @@
+<div class="container pl-4">
+   <h2 class="my-5"> Style Guide <span>Click on element to see style</span></h2>
+   <hr class="mb-2">
+   <div class="row p-2">
+       <div class="col-lg-6">
+         <div class="guide row pl-3 pt-4">
+            <div class="col-6 pl-2 py-4">
+               <p class="py-2 text-label"><b>DISABLED</b></p>
+               <div class="component my-4" (click)="btnDisabled()">
+                  <button class="btn-disabled">Primary Action</button>
+               </div>
+               <div *ngIf="btnDisabledStyle">
+                   <code>
+                        opacity: 0.4;
+                        cursor: not-allowed;
+                        background-color: #9CFF93;
+                        padding: 7px 0;
+                        color: #060606;
+                        border: none;
+                        font-family: Verdana, Geneva, sans-serif;
+                    </code>
+               </div>
+               <div class="pt-4 pb-5" (click)="inputDisabled()">
+                   <input type="text" name="text" class="disabled-input" placeholder=" textbox">
+               </div>
+               <div *ngIf="inputDisabledStyle">
+                   <p>disabled-input::placeholder</p>
+                   <code>
+                     font-style: italic;
+                     opacity: 0.3
+                   </code>
+                   <p>input[type=text]</p>
+                   <code>
+                     fpadding: 5px;
+                     border: 1px solid #A3A3A3;
+                     box-sizing: border-box;
+                     color: #232B2B;
+                   </code>
+                </div>
+               <div (click)="radioDisabled()">
+                   <label class="radio-container ml-2"> Radio Button
+                     <input type="radio" name="radio" (click)="radioDisabled()">
+                     <span class="checkmark"></span>
+                   </label>
+                   <label class="radio-container ml-2"> Radio Button
+                      <input type="radio" checked="checked" name="radio" (click)="radioDisabled()">
+                      <span class="checkmark"></span>
+                   </label>
+               </div>
+               <div *ngIf="radioDisabledStyle">
+                  <p>radio-container </p>
+                    <code>
+                        display: block;
+                        position: relative;
+                        padding-left: 35px;
+                        margin-bottom: 12px;
+                        cursor: pointer;
+                        color: #838B8B;
+                        font-size: 1.2rem;
+                        -webkit-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none;
+                    </code>
+                    <p>/* Hide the browser's default radio button */</p>
+                    <p>radio-container input </p>
+                    <code>
+                        position: absolute;
+                        opacity: 0;
+                        cursor: pointer;
+                    </code>
+                    <p>/*Create a custom radio button */</p>
+                    <p>checkmark </p>
+                    <code>
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      height: 20px;
+                      width: 20px;
+                      background-color: #FFF;
+                      border:1px solid #838B8B;
+                      border-radius: 50%;
+                    </code>
+                    <p>/* When the radio button is checked, add a blue background */</p>
+                    <p>radio-container input:checked ~ .checkmark </p>
+                      <code>
+                        background-color: #FFF;
+                      </code>
+                      <p>/* Create the indicator (the dot/circle - hidden when not checked) */</p>
+                    <p>checkmark:after </p>
+                    <code>
+                        content: "";
+                        position: absolute;
+                        display: none;
+                    </code>
+
+                    <p>/* Show the indicator (dot/circle) when checked */</p>
+                    <p>radio-container input:checked ~ .checkmark:after </p>
+                       <code>
+                        display: block;
+                    </code>
+
+                    <p>/* Style the indicator (dot/circle) */</p>
+                    <p>radio-container .checkmark:after </p>
+                      <code>
+                        top: 3px;
+                      	left: 3px;
+                      	width: 12px;
+                      	height: 12px;
+                      	border-radius: 50%;
+                      	background: #7AC471;
+                   </code>
+
+               </div>
+            </div>
+            <div class="col-6 pr-2 py-4">
+               <p class="py-2 text-label"><b>HOVER / ENABLED</b></p>
+               <div class="component  my-4" (click)="btnEnabled()">
+                  <button class="btn-enabled">Primary Action</button>
+               </div>
+               <div *ngIf="btnEnabledStyle">
+                   <code>
+                       background-color: #9CFF93;
+                       padding: 7px 0;
+                       color: #616161;
+                       border: none;
+                       font-family: Verdana, Geneva, sans-serif;
+                       box-shadow: 1px 2px #DCDCDC;
+                   </code>
+               </div>
+               <div class="pt-4 pb-5" (click)="inputEnabled()">
+                 <input class="enabled-input" type="text" name="text" placeholder=" textbox">
+               </div>
+               <div *ngIf="inputEnabledStyle">
+                   <p>::placeholder</p>
+                   <code>
+                     font-style: italic;
+                   </code>
+                   <p>input[type=text]</p>
+                   <code>
+                     fpadding: 5px;
+                     border: 1px solid #A3A3A3;
+                     box-sizing: border-box;
+                     color: #232B2B;
+                   </code>
+                   <p>enabled-input box-shadow</p>
+                   <code>
+                     box-shadow: 1px 2px #DCDCDC;
+                   </code>
+                </div>
+               <div (click)="radioEnabled()">
+                   <label class="radio-container2 ml-2"> Radio Button
+                     <input type="radio" name="radio2" (click)="radioEnabled()">
+                     <span class="checkmark2"></span>
+                   </label>
+                   <label class="radio-container2 ml-2"> Radio Button
+                      <input type="radio" checked="checked" name="radio2" (click)="radioEnabled()">
+                      <span class="checkmark2"></span>
+                   </label>
+                </div>
+                <div *ngIf="radioEnabledStyle">
+                   <p>radio-container </p>
+                     <code>
+                       display: block;
+                       position: relative;
+                       padding-left: 35px;
+                       margin-bottom: 12px;
+                       cursor: pointer;
+                       color: #616161;
+                       font-size: 1.2rem;
+                       -webkit-user-select: none;
+                       -moz-user-select: none;
+                       -ms-user-select: none;
+                       user-select: none;
+                     </code>
+                     <p>/* Hide the browser's default radio button */</p>
+                     <p>radio-container input </p>
+                     <code>
+                         position: absolute;
+                         opacity: 0;
+                         cursor: pointer;
+                     </code>
+                     <p>/*Create a custom radio button */</p>
+                     <p>checkmark </p>
+                     <code>
+                         position: absolute;
+                         top: 0;
+                         left: 0;
+                         height: 20px;
+                         width: 20px;
+                         background-color: #FFF;
+                         border:1px solid #838B8B;
+                         border-radius: 50%;
+                     </code>
+                     <p>/* When the radio button is checked, add a blue background */</p>
+                     <p>radio-container input:checked ~ .checkmark </p>
+                       <code>
+                         background-color: #FFF;
+                       </code>
+                       <p>/* Create the indicator (the dot/circle - hidden when not checked) */</p>
+                     <p>checkmark:after </p>
+                     <code>
+                         content: "";
+                         position: absolute;
+                         display: none;
+                     </code>
+
+                     <p>/* Show the indicator (dot/circle) when checked */</p>
+                     <p>radio-container input:checked ~ .checkmark:after </p>
+                        <code>
+                         display: block;
+                     </code>
+
+                     <p>/* Style the indicator (dot/circle) */</p>
+                     <p>radio-container .checkmark:after </p>
+                       <code>
+                        top: 3px;
+                      left: 3px;
+                      width: 12px;
+                      height: 12px;
+                      border-radius: 50%;
+                      background: #A3A3A3;
+                    </code>
+                </div>
+               <div class="card pl-3 pr-3 pt-4 pb-3 mt-5 mb-2" (click)="card()">
+                    <div class="card-heading px-1">
+                      <h3> Card Heading</h3>
+                    </div>
+                    <div class="card-text px-1">
+                        <p>
+                           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed
+                           vestibulum justo, hendrerit cursus nisl.
+                        </p>
+                    </div>
+                    <div class="px-1">
+                      <button class="card-btn btn-enabled">Action</button>
+                    </div>
+               </div>
+               <div *ngIf="cardStyle">
+                  <p>card</p>
+                  <code>
+                    border: 1px solid #A3A3A3;
+                    color: #616161;
+                  </code>
+                  <p>card text</p>
+                  <code>
+                    color: #616161;
+                    line-height: 1.2;
+                    font-size: 1.25rem;
+                  </code>
+                  <p>card heading</p>
+                  <code>
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 1.8rem
+                  </code>
+                  <p>card button</p>
+                  <code>
+                    width:100%;
+                    margin: auto
+                  </code>
+               </div>
+             </div>
+          </div>
+       </div>
+       <div class="col-lg-6">
+          <div class="row guide">
+             <div class="col-md-4">
+               <div class="primary-color lime">
+                  <p>Lime-Primary</p>
+                  <p>#9CFF93</p>
+               </div>
+               <div class="comp-color lime-dark">
+                  <p>Lime-Dark</p>
+                  <p>#7AC471</p>
+               </div>
+             </div>
+             <div class="col-md-4">
+               <div class="primary-color peach">
+                  <p>Peach-Primary</p>
+                  <p>#FFE9AF</p>
+               </div>
+               <div class="comp-color dark-peach">
+                  <p>Dark-Peach</p>
+                  <p>#FFD366</p>
+               </div>
+             </div>
+             <div class="col-md-4">
+               <div class="primary-color slate">
+                  <p>Slate-Primary</p>
+                  <p>#262630</p>
+               </div>
+               <div class="comp-color slate-lite">
+                  <p>Slate-Lite</p>
+                  <p>#CDCDD8</p>
+               </div>
+             </div>
+          </div>
+       </div>
+   </div>
+</div>

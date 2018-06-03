@@ -1,0 +1,269 @@
+h2{
+  color:#FFF;
+  font-family: "Palatino Linotype", "Book Antiqua", serif;
+}
+h2 span{
+   color: #262630;
+   font-size: 1.1rem;
+}
+p{
+  color:#262630;/*#E4E4E4;*/
+  font-family: Arial, Helvetica, sans-serif
+}
+[class*="col-"] {
+    background-clip: padding-box;
+    border: 10px solid transparent;
+}
+.text-label{
+  color: #CDCDD8;
+}
+.guide{
+  background-color: #FFF;
+  border-radius: 10px;
+  height: 550px;
+}
+.btn-disabled{
+   width:80%;
+   opacity: 0.4;
+   cursor: not-allowed;
+   background-color: #9CFF93;
+   padding: 7px 0;
+   color: #060606;
+   border: none;
+   font-family: Verdana, Geneva, sans-serif;
+}
+.btn-enabled{
+  width:80%;
+  background-color: #9CFF93;
+  padding: 7px 0;
+  color: #616161;
+  border: none;
+  font-family: Verdana, Geneva, sans-serif;
+  box-shadow: 1px 2px #DCDCDC;
+}
+.card{
+  width:85%;
+  border: 1px solid #A3A3A3;
+  color: #616161;
+}
+.card-text p{
+   color: #616161;
+   line-height: 1.2;
+   font-size: 1.25rem;
+}
+.card-heading{
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 1.8rem;
+}
+.card-btn{
+   width:100%;
+   margin: auto;
+}
+.disabled-input::placeholder{
+    font-style: italic;
+    opacity: 0.3
+}
+::placeholder {
+   font-style: italic;
+}
+input[type=text] {
+    width: 80%;
+    padding: 5px;
+    border: 1px solid #A3A3A3;
+    box-sizing: border-box;
+    color: #232B2B;
+}
+.enabled-input{
+   box-shadow: 1px 2px #DCDCDC;
+}
+/* ------------------------------disabled radio container --------------------------------*/
+.radio-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    color: #838B8B;
+    font-size: 1.2rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #FFF;
+    border:1px solid #838B8B;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radio-container:hover input ~ .checkmark {
+    /*background-color: #ccc;*/
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-container input:checked ~ .checkmark {
+    /*background-color: #2196F3;*/
+    background-color: #FFF;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio-container .checkmark:after {
+ 	top: 3px;
+	left: 3px;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: #A3A3A3;
+}
+/* ------------------------------enabled radio container --------------------------------*/
+.radio-container2 {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    color: #616161;
+    font-size: 1.2rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio-container2 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #FFF;
+    border:1px solid #838B8B;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radio-container2:hover input ~ .checkmark2 {
+    /*background-color: #ccc;*/
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-container2 input:checked ~ .checkmark2 {
+    background-color: #FFF;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark2:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-container2 input:checked ~ .checkmark2:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio-container2 .checkmark2:after {
+ 	top: 3px;
+	left: 3px;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: #7AC471;
+}
+.primary-color{
+   border-radius: 10px;
+   height:110px;
+   width: 100%;
+   margin:60px 0 10px 10px;
+   padding: 60px 0 20px 15px;
+}
+.comp-color{
+   border-radius: 10px;
+   height:70px;
+   width: 100%;
+   margin: 0 0 10px 10px;
+   padding: 20px 0 20px 15px;
+}
+.primary-color p, .comp-color p{
+   margin-bottom: 0;
+   font-size: 0.8rem;
+}
+.lime{
+   background-color: #9CFF93;
+}
+.lime-dark{
+   background-color: #7AC471;
+}
+.peach{
+   background-color: #FFE9AF;
+}
+.dark-peach{
+   background-color: #FFD366;
+}
+.slate{
+   background-color: #262630;
+}
+.slate p {
+   color: #FFF;
+}
+.slate-lite{
+   background-color: #CDCDD8;
+}
+@media (min-width: 576px) {
+  .primary-color p, .comp-color p{
+     margin-bottom: 0;
+     font-size: 0.9rem;
+  }
+ }
+@media (min-width: 768px) {
+
+}
+@media (min-width: 992px) {
+  .primary-color p, .comp-color p{
+     margin-bottom: 0;
+     font-size: 1.0rem;
+  }
+}
+@media (min-width: 1200px) {
+  .primary-color p, .comp-color p{
+     margin-bottom: 0;
+     font-size: 1.2rem;
+  }
+}
